@@ -1,6 +1,7 @@
 import { initConselho } from './modules/conselho.js';
 import { initCotacao } from './modules/cotacao.js';
-import { initClima } from './modules/clima.js'; // <-- 1. Importa o módulo de clima
+import { initClima } from './modules/clima.js';
+import { initNoticias } from './modules/noticias.js';
 
 // ===============================================
 // NAVEGAÇÃO ENTRE FERRAMENTAS (ABAS)
@@ -32,5 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavegacao();
   initConselho();
   initCotacao();
-  initClima(); // <-- 2. Inicializa o clima ao carregar a página
+  initClima();
+  initNoticias();
 });

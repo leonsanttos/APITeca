@@ -15,7 +15,7 @@
       <nav>
         <button class="nav-btn active" data-tool="conselho">Conselho do Dia</button>
         <button class="nav-btn" data-tool="cotacao">Cotação Moedas</button>
-        <button class="nav-btn" data-tool="clima">Previsão Clima</button>
+        <button class="nav-btn" data-tool="clima">Clima e Notícias</button>
       </nav>
     </aside>
 
@@ -50,17 +50,17 @@
 
       <!-- Clima -->
       <section id="tool-clima" class="tool-card hidden">
-        <h3>🌤️ Previsão do Clima</h3>
-        <p>Informe a cidade e o estado para ver as condições atuais:</p>
+        <h3>Clima e Notícias</h3>
+        <p>Informe a cidade e o país para consultar as condições locais e notícias relacionadas:</p>
         
         <form id="clima-form" class="clima-controls">
           <label>
             Cidade
-            <input id="input-cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Ex.: Campinas" required>
+            <input id="input-cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Ex.: Lisboa" required>
           </label>
           <label>
-            Estado ou UF
-            <input id="input-estado" name="estado" type="text" autocomplete="address-level1" placeholder="Ex.: SP ou São Paulo" required>
+            País
+            <input id="input-pais" name="pais" type="text" autocomplete="country-name" placeholder="Ex.: Portugal ou PT" required>
           </label>
           <button id="btn-clima" type="submit">Consultar Clima</button>
         </form>
@@ -68,6 +68,20 @@
         <div id="clima-resultado" class="resultado-box" role="status" aria-live="polite">
           Clique no botão para consultar o clima...
         </div>
+
+        <section class="noticias-panel" aria-labelledby="noticias-titulo">
+          <div class="noticias-heading">
+            <div>
+              <h4 id="noticias-titulo">Notícias da região</h4>
+              <p>Busca publicações em português relacionadas ao local. A GDELT agrega notícias, mas não verifica seu conteúdo; confira as fontes originais. Publicações em outros idiomas não são traduzidas nesta versão.</p>
+            </div>
+            <button id="btn-noticias" type="button" disabled>Atualizar</button>
+          </div>
+          <p id="noticias-status" class="noticias-status" role="status" aria-live="polite">
+            As notícias serão carregadas após a consulta do local.
+          </p>
+          <ul id="noticias-lista" class="noticias-lista" aria-busy="false"></ul>
+        </section>
       </section>
 
     </main>
