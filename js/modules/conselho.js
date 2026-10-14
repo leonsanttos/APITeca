@@ -13,7 +13,7 @@ export function initConselho() {
       const dados = await buscarDados('https://api.adviceslip.com/advice');
       conselhoTexto.textContent = `"${dados.slip.advice}"`;
     } catch (erro) {
-      conselhoTexto.textContent = "Ops! Não foi possível carregar um conselho agora.";
+      conselhoTexto.textContent = "Não foi possível carregar um conselho agora.";
     }
   });
 }

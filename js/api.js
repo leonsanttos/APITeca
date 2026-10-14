@@ -12,6 +12,6 @@ export async function buscarDados(url) {
     return await resposta.json();
   } catch (erro) {
     console.error("Erro ao conectar com a API:", erro);
-    throw erro; // Repassa o erro para ser tratado no módulo específico
+    throw erro; 
   }
 }
