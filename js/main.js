@@ -1,4 +1,6 @@
 import { initConselho } from './modules/conselho.js';
+import { initCotacao } from './modules/cotacao.js';
+import { initClima } from './modules/clima.js'; // <-- 1. Importa o módulo de clima
 
 // ===============================================
 // NAVEGAÇÃO ENTRE FERRAMENTAS (ABAS)
@@ -9,11 +11,9 @@ function initNavegacao() {
 
   navButtons.forEach(button => {
     button.addEventListener('click', () => {
-      // Atualiza botões ativos
       navButtons.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
 
-      // Atualiza exibição do card selecionado
       toolCards.forEach(card => card.classList.add('hidden'));
 
       const selectedTool = button.getAttribute('data-tool');
@@ -31,4 +31,6 @@ function initNavegacao() {
 document.addEventListener('DOMContentLoaded', () => {
   initNavegacao();
   initConselho();
+  initCotacao();
+  initClima(); // <-- 2. Inicializa o clima ao carregar a página
 });

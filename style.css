@@ -96,3 +96,105 @@ button#btn-conselho {
 button#btn-conselho:hover {
   background-color: #1d4ed8;
 }
+
+.cotacao-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cotacao-controls select, .cotacao-controls button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.cotacao-controls button {
+  background-color: #10b981;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cotacao-controls button:hover {
+  background-color: #059669;
+}
+
+.resultado-box {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f8fafc;
+  border-left: 4px solid #10b981;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+.clima-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.clima-controls label {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.clima-controls input, .clima-controls button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.clima-controls input {
+  min-width: 0;
+}
+
+.clima-controls button {
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.clima-controls button:hover {
+  background-color: #0369a1;
+}
+
+.clima-controls button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+  .app-container {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    height: auto;
+    flex-direction: column;
+    border-radius: 0;
+  }
+
+  .sidebar nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    padding: 24px;
+  }
+
+  .clima-controls {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

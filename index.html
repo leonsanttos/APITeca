@@ -32,13 +32,42 @@
       <!-- Cotação -->
       <section id="tool-cotacao" class="tool-card hidden">
         <h3>Cotação de Moedas</h3>
-        <p>Em breve...</p>
+        <p>Selecione a moeda para ver a cotação atualizada em Reais (BRL):</p>
+        
+        <div class="cotacao-controls">
+          <select id="select-moeda">
+            <option value="USD-BRL">Dólar Americano (USD)</option>
+            <option value="EUR-BRL">Euro (EUR)</option>
+            <option value="BTC-BRL">Bitcoin (BTC)</option>
+          </select>
+          <button id="btn-cotacao">Consultar Cotação</button>
+        </div>
+
+        <div id="cotacao-resultado" class="resultado-box">
+          Clique no botão para consultar...
+        </div>
       </section>
 
       <!-- Clima -->
       <section id="tool-clima" class="tool-card hidden">
-        <h3>Previsão do Clima</h3>
-        <p>Em breve...</p>
+        <h3>🌤️ Previsão do Clima</h3>
+        <p>Informe a cidade e o estado para ver as condições atuais:</p>
+        
+        <form id="clima-form" class="clima-controls">
+          <label>
+            Cidade
+            <input id="input-cidade" name="cidade" type="text" autocomplete="address-level2" placeholder="Ex.: Campinas" required>
+          </label>
+          <label>
+            Estado ou UF
+            <input id="input-estado" name="estado" type="text" autocomplete="address-level1" placeholder="Ex.: SP ou São Paulo" required>
+          </label>
+          <button id="btn-clima" type="submit">Consultar Clima</button>
+        </form>
+
+        <div id="clima-resultado" class="resultado-box" role="status" aria-live="polite">
+          Clique no botão para consultar o clima...
+        </div>
       </section>
 
     </main>
